@@ -1,7 +1,7 @@
 global outreg "H:\Desktop\ITP\JDE"
 
 set more off
-use "H:\Desktop\ITP\itp_jde.dta", clear // contains final data for paper
+use "$dta\itp_jde.dta", clear // contains final data for paper
 drop if weightedcountindex>500 & backwarddist==1
 drop w1 
 gen w1=(weightedcountindex/500)-1
@@ -60,7 +60,7 @@ foreach x in  "2" {
 
 ****************1998
 set more off
-use "H:\Desktop\ITP\JDE\itp_formal.dta", clear
+use "$dta\itp_formal.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 *Rescale score
 drop w1 
