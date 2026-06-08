@@ -2,7 +2,7 @@ use "$dta\itp_jde.dta", clear
 keep state91 dist91 backwarddist w1 w2 w3 logarea logpop work_partrate_t literacy_rate_t logag logmanuf logmainwork weightedcountindex loc_code
 duplicates drop _all, force
 assert _N==357
-save "C:\Users\Michelle Rafols\Documents\ITP\DistLevel.dta", replace
+save ""$dta\DistLevel.dta", replace
 
 
 /*
