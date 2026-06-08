@@ -5,7 +5,7 @@
 global outreg "H:\Desktop\ITP\JDE"
 
 set more off
-use "H:\Desktop\ITP\itp_jde.dta", clear // contains final data for paper
+use "$dta\itp_jde.dta", clear // contains final data for paper
 drop if weightedcountindex>500 & backwarddist==1
 *replace weightedcountindex=250 if weightedcountindex>500 & backwarddist==1
 
@@ -86,7 +86,7 @@ forval i=1/6 {
 
 ****************1998
 set more off
-use "H:\Desktop\ITP\JDE\itp_formal.dta", clear
+use "$dta\itp_formal.dta", clear
 drop if _merge==2
 drop if weightedcountindex>500 & backwarddist==1
 
@@ -173,7 +173,7 @@ forval i=1/6 {
 
 ****************2005
 set more off 
-use "H:\Desktop\ITP\JDE\itp_formal05_new.dta", clear
+use "$dta\itp_formal05_new.dta", clear
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
 *Rescale score
@@ -238,7 +238,7 @@ forval i=1/6 {
 
 **************************
 set more off
-use "H:\Desktop\ITP\JDE\ITP_ec2005_noIO_new.dta", clear
+use "$dta\ITP_ec2005_noIO_new.dta", clear
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
 *Rescale score
