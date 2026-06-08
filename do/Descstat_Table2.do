@@ -5,7 +5,7 @@
 global outreg "H:\Desktop\ITP\JDE"
 
 set more off
-use "H:\Desktop\ITP\itp_Restat.dta", clear // contains final data for paper
+use "H:\Desktop\ITP\itp_jde.dta", clear // contains final data for paper
 drop if weightedcountindex>500 & backwarddist==1
 *replace weightedcountindex=250 if weightedcountindex>500 & backwarddist==1
 
