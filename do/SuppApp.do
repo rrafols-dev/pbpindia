@@ -1,7 +1,7 @@
 global outreg "H:\Desktop\ITP\JDE"
 ***************1998
 set more off
-use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_Restat.dta", clear
+use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_jde.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 *Rescale score
 drop w1 
@@ -32,7 +32,7 @@ restore
 /* Second, we drop the districts which neighbor the backward states and union territories receiving similar policy support under the Finance Act of 1993, 
 which may have generated some spillovers over the state borders */
 set more off
-use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_Restat.dta", clear
+use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_jde.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 *Rescale score
 drop w1 
@@ -61,7 +61,7 @@ few of them (10 or more), then use the 14 group 3 districts above and these grou
 Table 4. Otherwise, may be not worth doing it.*/
 *9 districts from group 4 without any treated district NB; 14 G3 districts //  "Point1" sheet
 set more off
-use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_Restat.dta", clear
+use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_jde.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 *Rescale score
 drop w1 
@@ -100,7 +100,7 @@ foreach x in  "2" {
 
 *no boundary change districts
 set more off
-use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_Restat.dta", clear
+use "\\hd.ad.syr.edu\02\4f5841\Documents\Desktop\ITP\itp_jde.dta", clear
 drop _merge
 
 tempfile x
