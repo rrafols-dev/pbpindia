@@ -1,6 +1,4 @@
-global outreg "C:\Users\Michelle Rafols\Documents\ITP"
-
-use "F:\ADB\Geography of Jobs\MR\ITP\itpdata_large10.dta", clear
+use "$dta\itpdata_large10.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 rename statename state91 
 keep if (industry>=20 & industry<=38) | industry==888 //16 manuf industry dummies
@@ -35,7 +33,7 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-merge 1:1 state91 dist91 using "C:\Users\Michelle Rafols\Documents\ITP\DistLevel.dta"
+merge 1:1 state91 dist91 using "$dta\DistLevel.dta"
 assert _merge==3
 
 set more off
@@ -71,7 +69,7 @@ foreach x in "2" {
 *********************
 *********************
 
-use "F:\ADB\Geography of Jobs\MR\ITP\itpdata_large10.dta", clear
+use "$dta\itpdata_large10.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 rename statename state91 
 *keep if (industry>=20 & industry<=38) | industry==888 // now all untreated
@@ -104,7 +102,7 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-merge 1:1 state91 dist91 using "C:\Users\Michelle Rafols\Documents\ITP\DistLevel.dta"
+merge 1:1 state91 dist91 using "$dta\DistLevel.dta"
 assert _merge==3
 
 set more off
@@ -148,7 +146,7 @@ foreach x in "2" {
 *****
 
 clear
-use "F:\ADB\Geography of Jobs\MR\ITP\itpdata_below10.dta", clear
+use "$dta\itpdata_below10.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 rename statename state91 
 keep if (industry>=20 & industry<=38) | industry==888 //16 manuf industry dummies
@@ -182,7 +180,7 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-merge 1:1 state91 dist91 using "C:\Users\Michelle Rafols\Documents\ITP\DistLevel.dta"
+merge 1:1 state91 dist91 using "$dta\DistLevel.dta"
 assert _merge==3
 
 set more off
@@ -218,7 +216,7 @@ foreach x in "2" {
 *********************
 *********************
 
-use "F:\ADB\Geography of Jobs\MR\ITP\itpdata_below10.dta", clear
+use "$dta\itpdata_below10.dta", clear
 drop if weightedcountindex>500 & backwarddist==1
 rename statename state91 
 *keep if (industry>=20 & industry<=38) | industry==888 //now all untreated
@@ -251,7 +249,7 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-merge 1:1 state91 dist91 using "C:\Users\Michelle Rafols\Documents\ITP\DistLevel.dta"
+merge 1:1 state91 dist91 using "$dta\DistLevel.dta"
 assert _merge==3
 
 set more off
