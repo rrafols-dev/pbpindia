@@ -1,7 +1,7 @@
 global outreg "C:\Users\Michelle Rafols\Documents\ITP"
 
 
-use "F:\ADB\ITP Revise\itp_Restat.dta", clear
+use "F:\ADB\ITP Revise\itp_jde.dta", clear
 keep state91 dist91 backwarddist w1 w2 w3 logarea logpop work_partrate_t literacy_rate_t logag logmanuf logmainwork weightedcountindex loc_code
 duplicates drop _all, force
 assert _N==357
@@ -13,7 +13,7 @@ e.	(R2C2) Collapse the data (firm counts and employment) to district level for m
 and non-manufacturing (untreated) industries, respectively.Estimate the following models for the three samples (G3-G4, G2-G5, and full sample) 
 and for manufacturing and non-manufacturing industries (3x2=6 regressions in total):
 */
-use "F:\ADB\ITP Revise\itp_Restat.dta", clear
+use "F:\ADB\ITP Revise\itp_jde.dta", clear
 keep if (industry>=20 & industry<=38) | industry==888 //16 manuf industry dummies
 tab didl didc, m
 tab did, m
@@ -62,7 +62,7 @@ foreach x in "" "2" {
 }
 *********************
 *********************
-use "F:\ADB\ITP Revise\itp_Restat.dta", clear
+use "F:\ADB\ITP Revise\itp_jde.dta", clear
 /*
 e.	(R2C2) Collapse the data (firm counts and employment) to district level for manufacturing (treated) industries 
 and non-manufacturing (untreated) industries, respectively.Estimate the following models for the three samples (G3-G4, G2-G5, and full sample) 
