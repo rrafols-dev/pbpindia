@@ -1,6 +1,6 @@
 *Genereate T-test for untreated industries
 set more off
-use "F:\ADB\ITP Revise\itp_Restat.dta", clear
+use "F:\ADB\ITP Revise\itp_jde.dta", clear
 tab didl didc, m
 tab did, m
 tab did backwarddist, m
