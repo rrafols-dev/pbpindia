@@ -1,7 +1,6 @@
-global outreg "H:\Desktop\ITP\JDE"
 
 set more off
-use "$dta\itp_jde.dta", clear // contains final data for paper
+use "$dta\itp_jde.dta", clear 
 drop if weightedcountindex>500 & backwarddist==1
 drop w1 
 gen w1=(weightedcountindex/500)-1
