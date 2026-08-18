@@ -1,5 +1,5 @@
 set more off
-global td1991 $dta
+global td1991 "$dta" 
 use "$td1991\td1991", clear
 rename state statename
 rename district distname
