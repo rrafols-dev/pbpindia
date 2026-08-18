@@ -1,4 +1,5 @@
 set more off
+global td1991 $dta
 use "$td1991\td1991", clear
 rename state statename
 rename district distname
@@ -6,7 +7,7 @@ drop if statename==""
 drop SLNO townname tehsil
 duplicates drop _all, force
 keep rail_dist statename distname pop1991 Areasqkm sh_dist city_dist tot_rev tot_exp banks arts science commerce medical engg law polytech medical n_a_c_soc el_dom el_ind el_com total_roadlength avg_rain min_temp max_temp
-	replace distname="24 Parganas*" if statename=="West Bengal" & distname=="Calcutta"
+	replace distname="24Â Parganas*" if statename=="West Bengal" & distname=="Calcutta"
 	replace distname="24 Parganas*" if distname=="Barasat" & statename=="West Bengal"
 	replace distname="24 Parganas*" if distname=="Alipore" & statename=="West Bengal"
 	replace distname="West Khasi Hills" if distname=="Nongstoin" & statename=="Meghalaya"
@@ -21,7 +22,7 @@ keep rail_dist statename distname pop1991 Areasqkm sh_dist city_dist tot_rev tot
 	replace distname="Murshidabad" if distname=="Baharampur" & statename=="West Bengal"
 	replace distname="Birbhum" if distname=="Suri" & statename=="West Bengal"
 	replace distname="Hugli" if distname=="Chinsurah" & statename=="West Bengal"
-	replace distname="West Dinajpur" if distname=="Balurghat" & statename=="West Bengal"
+	replace distname="WestÂ Dinajpur" if distname=="Balurghat" & statename=="West Bengal"
 	replace distname="Maldah" if distname=="English Bazar" & statename=="West Bengal"
 	replace distname="Sindhudurg" if distname=="Kudal" & statename=="Maharashtra"
 	replace distname="Raigarh" if distname=="Alibag" & statename=="Maharashtra"
@@ -82,10 +83,10 @@ keep rail_dist statename distname pop1991 Areasqkm sh_dist city_dist tot_rev tot
 	replace distname="Sirmaur" if distname=="Nahan" & statename=="Himachal Pradesh"	
 	replace distname="Chennai" if distname=="Madras" & statename=="Tamil Nadu"
 	replace distname="Virudhunagar" if distname=="Virudunagar" & statename=="Tamil Nadu"
-	replace distname="Chengalpattu MGR" if distname=="Kanchipuram" & statename=="Tamil Nadu"
+	replace distname="ChengalpattuÂ MGR" if distname=="Kanchipuram" & statename=="Tamil Nadu"
 	replace distname="The Nilgiris" if distname=="Udhagamandalam" & statename=="Tamil Nadu"
 	replace distname="Kanniyakumari" if distname=="Nagercoil" & statename=="Tamil Nadu"
-	replace distname="South Arcot" if distname=="Cuddalore" & statename=="Tamil Nadu"
+	replace distname="SouthÂ Arcot" if distname=="Cuddalore" & statename=="Tamil Nadu"
 	replace distname="Thoothukkudi" if distname=="Tuticorin" & statename=="Tamil Nadu"
 	replace distname="Bulandshahar" if distname=="Bulandshahr" & statename=="Uttar Pradesh"
 	replace distname="Mahrajganj" if distname=="Maharajganj" & statename=="Uttar Pradesh"
