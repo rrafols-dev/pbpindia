@@ -152,6 +152,7 @@ tempfile v
 save `v'
 
 use "$dta\itp_pca1991", clear
+replace dist91 = ustrfix(dist91, " ")
 merge 1:m statename dist91 using `v' 
 keep if _merge==3
 drop if weightedcountindex>500 & backwarddist==1
