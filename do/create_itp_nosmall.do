@@ -100,14 +100,14 @@ count // 563
 tempfile x
 save `x'	
 
-use "$dta\ec1998_dist_ind98_2.dta", clear // conservative = (2) ; agressive uses the file with no suffix: ec1998_dist_ind98
+use "$dta\ec1998_dist_ind98_nosmall_1",clear 
 replace industry=1 if industry==2
 	drop if industry==88 | industry==86 | industry==87 | industry==100
 	replace industry=35 if industry==36
 	replace industry=20 if industry==21
 	replace industry=20 if industry==22
 collapse(sum) tot_emp num_firms, by(statename c01_state c01_state3 c01_stdist c01_distname urban industry)
-do "$do\districtindustry_01to91borders.do" 
+do "$do\districtindustry_01to91borders.do"
 replace industry=2 if industry==1
 unique c01_stdist
 unique statename c01_state c01_state3 c01_stdist c01_distname 
@@ -161,4 +161,4 @@ save `v'
 
 use "$dta\itp_pca1991", clear
 merge 1:m statename dist91 using `v' 
-saveold itpdata_conser.dta, replace // save as itpdata_agress.dta if using "ec1998_dist_ind98.dta"
+saveold itpdata_nosmall.dta, replace 
