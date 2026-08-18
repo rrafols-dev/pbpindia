@@ -83,10 +83,12 @@ rename _merge mergeTD
 unique state91 district91 if policy!=. //should be 360
 unique state91 district91 if policy==1 | policy==2 //123 backward districts
 bys policy: sum weightedcountindex
+replace district91 = ustrfix(district91, " ")
 tempfile a
 save `a'
 
 import excel using "$dta\ITP_OverlappingPolicies.xls", firstrow clear sheet("OP")
+replace district91 = usubinstr(district91, uchar(160), " ", .)
 merge 1:m state91 district91  using `a'
 assert policy==. if _merge!=3
 drop if _merge!=3
