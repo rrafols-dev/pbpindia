@@ -319,6 +319,7 @@ label var BDxNB5 "with neighbors 651 to 850"
 label var BDxNB6 "with neighbors 851 and above"
 save ITP_ec2005_noIO.dta, replace
 
+*Saving "_new" version:
 use ITP_ec2005_noIO.dta, clear
 replace did4=1 if industry==26 | industry==28
 replace did3=0 if industry==26 | industry==28
@@ -354,4 +355,28 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-save ITP_ec2005_noIO_new.dta, replace 
+tempfile xyz
+save `xyz'
+
+use ITP_ec2005_noIO.dta, clear
+keep loc_code weightedcountindex backwarddist  w1 w2 state91 dist91  logarea logpop work_partrate_t literacy_rate_t logag logmanuf logmainwork ///
+nbcat* NIL_NB* group* BDxNB*
+duplicates drop _all, force
+merge 1:m loc_code using `xyz'
+drop _merge
+gen indqual=1 if (did3==1 | did4==1)
+gen indqual1=1 if did3==1 
+gen indqual2=1 if did4==1
+replace indqual=0 if indqual==.
+replace indqual1=0 if indqual1==.
+replace indqual2=0 if indqual2==.
+gen bdv2=backwarddist*(1-indqual)
+gen did=indqual*backwarddist
+gen didl=indqual1*backwarddist
+gen didc=indqual2*backwarddist
+label var did "treatment industry interaction term"
+label var didl "treatment (labor-manufacturing) interaction term"
+label var didc "treatment (capital-manufacturing) interaction term"
+save "ITP_ec2005_noIO_new.dta", replace 
+
+
