@@ -39,7 +39,7 @@ pbpindia/
 │   ├── histogram.do                          803
 │   └── state_map.do                        3,672    maps; needs dist91 + dist91_coord
 └── dta/
-    ├── supplied inputs
+    ├── supplied inputs:
     │   ├── ITP_BD_neighbor.dta                244,909
     │   ├── ITP_OverlappingPolicies.xls        105,472
     │   ├── gradation_EC_1998_all.dta        1,003,128
@@ -50,7 +50,7 @@ pbpindia/
     │   ├── dist_nochange91.dta                 52,737
     │   ├── dist91.dta                         166,474    1991 district attributes (STATE_UT)
     │   └── dist91_coord.dta                29,247,370    1991 district polygons, for spmap
-    ├── built by the codes in "/do" folder
+    ├── built by the codes in "/do" folder:
     │   ├── ec1998_dist_ind98.dta            7,163,082
     │   ├── ec1998_dist_ind98_1.dta          7,163,082
     │   ├── ec1998_dist_ind98_2.dta          7,163,082
