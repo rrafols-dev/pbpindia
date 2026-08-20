@@ -16,11 +16,11 @@ shared. They are referenced but must be supplied by the user. Access is with MOS
 pbpindia/
 ├── README.md
 ├── do/
-│   ├── create_collapsed_ec1998.do          8,685    raw EC1998 -> district x industry
-│   ├── create_collapsed_ec2005.do          3,129    raw EC2005 -> district x industry
-│   ├── nic87_incexempt.do                  2,843    1987 NIC policy-coverage tagging
-│   ├── nic87_incexempt1.do                 1,613
-│   ├── nic87_incexempt2.do                   863
+│   ├── create_collapsed_ec1998.do          8,685    raw EC1998 [restricted] -> district x industry
+│   ├── create_collapsed_ec2005.do          3,129    raw EC2005 [restricted] -> district x industry
+│   ├── nic87_incexempt.do                  2,843    1987 NIC policy-coverage tagging (agressive)
+│   ├── nic87_incexempt1.do                 1,613    1987 NIC policy-coverage tagging
+│   ├── nic87_incexempt2.do                   863    1987 NIC policy-coverage tagging (conservative)
 │   ├── nic04_incexempt1.do                   263    2004 NIC policy-coverage tagging
 │   ├── addtd1991.do                       10,213    town directory 1991
 │   ├── districtindustry_01to91borders.do   5,946    2001 -> 1991 district borders
