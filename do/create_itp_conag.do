@@ -164,4 +164,4 @@ save `v'
 use "$dta\itp_pca1991", clear
 replace dist91 = ustrfix(dist91, " ")
 merge 1:m statename dist91 using `v' 
-saveold itpdata_conser.dta, replace // save as itpdata_agress.dta if using "ec1998_dist_ind98.dta"
+saveold "$dta\itpdata_conser.dta", replace // save as itpdata_agress.dta if using "ec1998_dist_ind98.dta"
