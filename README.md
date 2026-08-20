@@ -61,9 +61,11 @@ pbpindia/
     │   ├── itpdata_nosmall.dta             36,822,059
     │   └── dataforgraphs.dta               41,649,711
     └── (no unreferenced files)
-
-The enterprise-level Economic Census files are not public use files and cannot be
+```
+## Restricted Data:
+The enterprise-level Economic Census files are non-public use files and cannot be
 shared. They are referenced but must be supplied by the user. Access is with MOSPI:
+```
     ec1998_data_urb   ec1998_data_rur   ec1998_urb_dir   ec1998_dir_rur_sdt
     ec2005_data_urb   ec2005_data_rur   ec2005_urb_dir   ec2005_dir_rur_sdt
 ```
