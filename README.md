@@ -78,7 +78,7 @@ the unsuffixed `ec1998_dist_ind98.dta` gives the aggressive one, and line 167 re
 the matching output name. Running it as shipped yields `itpdata_conser.dta`; to get
 `itpdata_agress.dta` the user swaps those two lines. 
 
-## Set Directory
+## Set Paths/Directory 
 ```
 * ---- the only line you need to edit -----------------------------------------
 global root "<user main folder here>"
