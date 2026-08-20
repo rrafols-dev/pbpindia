@@ -143,7 +143,7 @@ gen urban=0
 append using `x'
 
 gen num_firms=1
-do "$xmpt\nic87_incexempt1.do" // tag firms not covered in the policy. 1=medium, 0=restrictive, 2=generous, paper uses 1
+do "$do\nic87_incexempt1.do" // tag firms not covered in the policy. 1=medium, 0=restrictive, 2=generous, paper uses 1
 count if tag==1 
 
 gen string=1 if strpos(nic, ".")
@@ -174,7 +174,7 @@ foreach var of varlist tot_emp2-num_firms888 {
 	replace `var'=0 if `var'==.
 }
 reshape long
-save "$mr\ec1998_dist_ind98_nosmall_1", replace
+save "$dta\ec1998_dist_ind98_nosmall_1", replace
 
 ***
 *1998 ; registered firms only
@@ -234,4 +234,4 @@ foreach var of varlist tot_emp2-num_firms888 {
 	replace `var'=0 if `var'==.
 }
 reshape long
-save "$mr\ec1998_dist_rf1_ind98", replace
+save "$dta\ec1998_dist_rf1_ind98", replace
