@@ -1,4 +1,3 @@
-global outreg "H:\Desktop\ITP\JDE"
 ***************1998
 set more off
 use "$dta\itp_jde.dta", clear
