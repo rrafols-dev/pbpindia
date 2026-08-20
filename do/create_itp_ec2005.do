@@ -317,10 +317,10 @@ label var BDxNB3 "with neighbors 351 to 500"
 label var BDxNB4 "with neighbors 501 to 650"
 label var BDxNB5 "with neighbors 651 to 850"
 label var BDxNB6 "with neighbors 851 and above"
-save ITP_ec2005_noIO.dta, replace
+save "$dta/ITP_ec2005_noIO.dta", replace
 
 *Saving "_new" version:
-use ITP_ec2005_noIO.dta, clear
+use "$dta/ITP_ec2005_noIO.dta", clear
 replace did4=1 if industry==26 | industry==28
 replace did3=0 if industry==26 | industry==28
 
@@ -358,7 +358,7 @@ replace ltot_emp2=0 if ltot_emp2==.
 tempfile xyz
 save `xyz'
 
-use ITP_ec2005_noIO.dta, clear
+use "$dta/ITP_ec2005_noIO.dta", clear
 keep loc_code weightedcountindex backwarddist  w1 w2 state91 dist91  logarea logpop work_partrate_t literacy_rate_t logag logmanuf logmainwork ///
 nbcat* NIL_NB* group* BDxNB*
 duplicates drop _all, force
@@ -377,6 +377,6 @@ gen didc=indqual2*backwarddist
 label var did "treatment industry interaction term"
 label var didl "treatment (labor-manufacturing) interaction term"
 label var didc "treatment (capital-manufacturing) interaction term"
-save "ITP_ec2005_noIO_new.dta", replace 
+save "$dta/ITP_ec2005_noIO_new.dta", replace 
 
 
