@@ -1,6 +1,13 @@
 Replication package for "Place-based preferential tax policy and industrial development: Evidence from India’s program on industrially backward districts". 
 Rana Hasan, Yi Jiang, and Radine Rafols
 
+## Restricted Data:
+The enterprise-level Economic Census files are non-public use files and cannot be
+shared. They are referenced but must be supplied by the user. Access is with MOSPI:
+```
+    ec1998_data_urb   ec1998_data_rur   ec1998_urb_dir   ec1998_dir_rur_sdt
+    ec2005_data_urb   ec2005_data_rur   ec2005_urb_dir   ec2005_dir_rur_sdt
+```
 
 
 ## File tree
@@ -61,13 +68,6 @@ pbpindia/
     │   ├── itpdata_nosmall.dta             36,822,059
     │   └── dataforgraphs.dta               41,649,711
     └── (no unreferenced files)
-```
-## Restricted Data:
-The enterprise-level Economic Census files are non-public use files and cannot be
-shared. They are referenced but must be supplied by the user. Access is with MOSPI:
-```
-    ec1998_data_urb   ec1998_data_rur   ec1998_urb_dir   ec1998_dir_rur_sdt
-    ec2005_data_urb   ec2005_data_rur   ec2005_urb_dir   ec2005_dir_rur_sdt
 ```
 
 ## Note: the conservative / aggressive switch:
