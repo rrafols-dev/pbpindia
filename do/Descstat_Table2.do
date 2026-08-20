@@ -1,9 +1,6 @@
 *************************
 *Descriptive Statistics
 *************************
-*pick1:
-global outreg "H:\Desktop\ITP\JDE"
-
 set more off
 use "$dta\itp_jde.dta", clear // contains final data for paper
 drop if weightedcountindex>500 & backwarddist==1
