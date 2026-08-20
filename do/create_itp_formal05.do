@@ -216,7 +216,7 @@ gen lnum_firms2=lnum_firms
 gen ltot_emp2=ltot_emp
 replace lnum_firms2=0 if lnum_firms2==.
 replace ltot_emp2=0 if ltot_emp2==.
-save "itp_formal05_new.dta"
+save "$dta/itp_formal05_new.dta"
 
 use `main', clear
 keep loc_code weightedcountindex backwarddist  w1 w2 state91 dist91 logarea logpop work_partrate_t literacy_rate_t logag logmanuf logmainwork ///
@@ -237,4 +237,4 @@ gen didc=indqual2*backwarddist
 label var did "treatment industry interaction term"
 label var didl "treatment (labor-manufacturing) interaction term"
 label var didc "treatment (capital-manufacturing) interaction term"
-save "itp_formal05_new.dta", replace 
+save "$dta/itp_formal05_new.dta", replace 
