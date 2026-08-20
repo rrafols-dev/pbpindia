@@ -1,7 +1,7 @@
 Replication package for "Place-based preferential tax policy and industrial development: Evidence from India’s program on industrially backward districts". 
 Rana Hasan, Yi Jiang, and Radine Rafols
 
-## Restricted Data:
+## Restricted Data
 The enterprise-level Economic Census files are non-public use files and cannot be
 shared. They are referenced but must be supplied by the user. Access is with MOSPI:
 ```
